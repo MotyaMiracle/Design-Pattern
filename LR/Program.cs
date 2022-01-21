@@ -13,13 +13,25 @@ namespace LR
         {
             MallardDuck MD = new MallardDuck();
             RedheadDuck RD = new RedheadDuck();
-            Duck[] duck = new Duck[] { MD, RD };
+            RubberDuck RubbD = new RubberDuck();
+            DecoyDuck DD = new DecoyDuck();
+            Duck[] ducks = new Duck[] { MD, RD, RubbD, DD };
 
-            for (int i = 0; i < duck.Length; i++)
+            foreach (Duck duck in ducks)
             {
-                Console.WriteLine(duck[i].quack());
-                Console.WriteLine(duck[i].swim());
-                Console.WriteLine(duck[i].display());
+                Console.WriteLine(duck.display());
+                Console.WriteLine(duck.swim());
+
+                if (duck is IQuackable)
+                {
+                    Console.WriteLine((duck as IQuackable).quack());
+                }
+
+                if (duck is IFlyable)
+                {
+                    Console.WriteLine((duck as IFlyable).fly());
+                }
+                Console.WriteLine();
             }
             Console.ReadKey();
         }
