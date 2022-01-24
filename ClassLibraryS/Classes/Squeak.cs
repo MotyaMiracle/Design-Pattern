@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibraryS
+namespace ClassLibraryS.Classes
 {
-    public class DecoyDuck : Duck
+    public class Squeak : IQuackBehavior
     {
-        public override string display()
+        public string quack()
         {
-            return "display " + this.GetType();
+            return "Пи пи пи";
         }
     }
 }

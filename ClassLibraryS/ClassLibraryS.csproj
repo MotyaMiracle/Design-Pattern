@@ -41,14 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DecoyDuck.cs" />
-    <Compile Include="Duck.cs" />
-    <Compile Include="Flyable.cs" />
-    <Compile Include="MallardDuck.cs" />
+    <Compile Include="Classes\DecoyDuck.cs" />
+    <Compile Include="Classes\DQuack.cs" />
+    <Compile Include="Classes\Duck.cs" />
+    <Compile Include="Classes\FlyNoWay.cs" />
+    <Compile Include="Classes\FlyWithWings.cs" />
+    <Compile Include="Classes\MuteQuack.cs" />
+    <Compile Include="Classes\Squeak.cs" />
+    <Compile Include="Interfaces\FlyBehavior.cs" />
+    <Compile Include="Classes\MallardDuck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quackable.cs" />
-    <Compile Include="RedheadDuck.cs" />
-    <Compile Include="RubberDuck.cs" />
+    <Compile Include="Interfaces\QuackBehavior.cs" />
+    <Compile Include="Classes\RedheadDuck.cs" />
+    <Compile Include="Classes\RubberDuck.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
